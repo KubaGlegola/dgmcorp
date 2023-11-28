@@ -1,5 +1,8 @@
 @import "utils/variables";
 @import "utils/mixins";
+@import "utils/colors";
+
+@import "vendors/hamburger";
 
 @import "base/reset";
 @import "base/typography";
@@ -8,5 +11,21 @@
 //layout
 
 //components
+@import "components/wrapper";
+@import "components/header";
+@import "components/hamburger";
+@import "components/nav";
+@import "components/cards";
+@import "components/info";
+@import "components/section-title";
+@import "components/plans";
+@import "components/newsletter";
+@import "components/gallery";
+@import "components/footer";
+@import "components/contact";
 
 //pages
+
+body {
+  background-color: $dark;
+}

@@ -1,0 +1,69 @@
+.nav {
+  &-mobile {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    background-color: $white;
+    transform: translateX(-102%);
+    transition: transform 0.3s;
+    z-index: 10;
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+
+  &-desktop {
+    display: none;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 2.3rem;
+    color: $darker;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    &-desktop {
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__link {
+      color: $white;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 1px solid $gold;
+        opacity: 0;
+      }
+
+      &:hover::before {
+        animation: pulse 1s;
+      }
+    }
+  }
+}

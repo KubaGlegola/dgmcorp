@@ -1,0 +1,31 @@
+.section-title {
+  position: relative;
+  margin: 0 auto 2em;
+  font-size: 3.2rem;
+  color: $gold;
+  font-weight: 200;
+  width: fit-content;
+
+  &::before {
+    position: absolute;
+    bottom: -0.1em;
+    width: 40px;
+    height: 2px;
+    background-color: $gold;
+    content: "";
+  }
+
+  span {
+    font-weight: 900;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    font-size: 4.8rem;
+
+    &::before {
+      height: 4px;
+    }
+  }
+}
